@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+  - name: raw_event_data
+    description: "서울시 문화행사 데이터 원본 소스"
+    schema: source
+    tables:
+      - name: source_event
+        description: 문화행사 원본 데이터
+        columns:
+          - name: area_code
+            description: 핫스팟 코드명
+          - name: area_name
+            description: 핫스팟 장소명
+          - name: event_name
+            description: 문화행사명
+          - name: event_period
+            description: 문화행사 기간 (YYYY-MM-DD ~ YYYY-MM-DD)
+          - name: event_place
+            description: 문화행사 장소
+          - name: event_x
+            description: 문화행사 X 좌표 (경도)
+          - name: event_y
+            description: 문화행사 Y 좌표 (위도)
+          - name: is_paid
+            description: 유무료 여부
+          - name: thumbnail_url
+            description: 문화행사 대표 이미지 URL
+          - name: event_url
+            description: 문화행사 상세정보 URL
+          - name: event_extra_detail
+            description: 문화행사 기타 세부정보
+          - name: observed_at
+            description: 관측 시각
+          - name: created_at
+            description: 데이터 적재 시각
