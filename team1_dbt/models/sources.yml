@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: raw_commercial_data 
+    description: "서울시 상권 데이터 원본 소스"
+    schema: source           
+
+    tables:
+      - name: commercial     
+        description: "상권 일반 데이터"
+        identifier: source_commercial 
+        loaded_at_field: created_at 
+      - name: commercial_rsb  
+        description: "상권 카테고리별 데이터"
+        identifier: source_commercial_rsb
+        loaded_at_field: created_at 
+
+  - name: dim_data
+    schema: dim
+
+    tables:
+      - name: category
+        identifier: dim_category 
+      - name: area
+        identifier: dim_area

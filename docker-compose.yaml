@@ -140,6 +140,7 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
@@ -154,6 +155,7 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+        
 
   airflow-dag-processor:
     <<: *airflow-common
