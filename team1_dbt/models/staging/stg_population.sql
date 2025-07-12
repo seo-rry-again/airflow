@@ -1,0 +1,23 @@
+SELECT
+    source_id,
+    area_code,
+    area_name,
+    congestion_label,
+    population_min,
+    population_max,
+    male_population_ratio,
+    female_population_ratio,
+    age_0s_ratio,
+    age_10s_ratio,
+    age_20s_ratio,
+    age_30s_ratio,
+    age_40s_ratio,
+    age_50s_ratio,
+    age_60s_ratio,
+    age_70s_ratio,
+    resident_ratio,
+    non_resident_ratio,
+    is_replaced,
+    observed_at,
+    created_at
+FROM {{ source('raw', 'population') }}

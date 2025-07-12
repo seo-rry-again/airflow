@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: source
+    tables:
+      - name: population
+        identifier: source_population
